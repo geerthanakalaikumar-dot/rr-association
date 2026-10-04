@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ink text-bone font-body antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #c8a15a;
+  color: #07090d;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #07090d;
+}
+::-webkit-scrollbar-thumb {
+  background: #1c2430;
+  border-radius: 4px;
+}
+
+/* Blueprint grid used behind sections (subtle technical-drawing feel). */
+.blueprint-grid {
+  background-image:
+    linear-gradient(rgba(80, 110, 150, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(80, 110, 150, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.glass-panel {
+  background: rgba(12, 16, 22, 0.55);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(200, 161, 90, 0.12);
+}
+
+/* Numbered service rows */
+.rule-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #1c2430 20%, #1c2430 80%, transparent);
+}
