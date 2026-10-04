@@ -4,6 +4,9 @@
 
 :root {
   color-scheme: dark;
+  /* System font stacks — closest reliable match to the original display/body fonts */
+  --font-display: Georgia, "Times New Roman", serif;
+  --font-body: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
 }
 
 html {
