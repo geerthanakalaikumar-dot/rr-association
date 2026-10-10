@@ -9,6 +9,7 @@ import Founder from "@/components/Founder";
 import WhyUs from "@/components/WhyUs";
 import { Experience, Approach, CTA } from "@/components/CompanySections";
 import Contact from "@/components/Contact";
+import Profile from "@/components/Profile";
 import Footer from "@/components/Footer";
 import CursorGlow from "@/components/CursorGlow";
 
@@ -29,6 +30,7 @@ export default function Home() {
       <Founder />
       <WhyUs />
       <Contact />
+      <Profile />
       <Footer />
     </main>
   );
