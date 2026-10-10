@@ -34,40 +34,62 @@ export default function Contact() {
       id="contact"
       className="relative py-20 px-6 bg-coal border-t border-line"
     >
-      <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 divide-y sm:divide-y-0 divide-line text-center">
-        {ITEMS.map((item) => (
-          <div
-            key={item.label}
-            className="py-6 px-4"
-          >
-            <p className="text-gold text-[10px] tracking-widest2 mb-3">
-              {item.label}
-            </p>
+      <div className="max-w-5xl mx-auto">
 
-            {item.href ? (
-              <a
-                href={item.href}
-                target={
-                  item.label === "LINKEDIN ID" ||
-                  item.label === "INSTAGRAM ID"
-                    ? "_blank"
-                    : undefined
-                }
-                rel={
-                  item.label === "LINKEDIN ID" ||
-                  item.label === "INSTAGRAM ID"
-                    ? "noopener noreferrer"
-                    : undefined
-                }
-                className="text-bone hover:text-gold transition-colors break-words"
-              >
-                {item.value}
-              </a>
-            ) : (
-              <p className="text-bone">{item.value}</p>
-            )}
-          </div>
-        ))}
+        {/* Contact heading */}
+        <div className="text-center mb-12">
+          <p className="text-gold text-xs tracking-[0.3em] mb-3">
+            GET IN TOUCH
+          </p>
+
+          <h2 className="font-display text-3xl md:text-5xl text-bone leading-tight">
+            CONTACT RR ASSOCIATES BUILDERS
+          </h2>
+
+          <p className="text-fog mt-4 text-sm md:text-base">
+            Let’s build something great together.
+          </p>
+        </div>
+
+        {/* Contact details */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 divide-y sm:divide-y-0 divide-line text-center">
+          {ITEMS.map((item) => (
+            <div
+              key={item.label}
+              className="py-6 px-4 border-b border-line/60"
+            >
+              <p className="text-gold text-[10px] tracking-widest2 mb-3">
+                {item.label}
+              </p>
+
+              {item.href ? (
+                <a
+                  href={item.href}
+                  target={
+                    item.label === "LINKEDIN ID" ||
+                    item.label === "INSTAGRAM ID"
+                      ? "_blank"
+                      : undefined
+                  }
+                  rel={
+                    item.label === "LINKEDIN ID" ||
+                    item.label === "INSTAGRAM ID"
+                      ? "noopener noreferrer"
+                      : undefined
+                  }
+                  className="text-bone hover:text-gold transition-colors break-words"
+                >
+                  {item.value}
+                  {(item.label === "LINKEDIN ID" ||
+                    item.label === "INSTAGRAM ID") && " ↗"}
+                </a>
+              ) : (
+                <p className="text-bone">{item.value}</p>
+              )}
+            </div>
+          ))}
+        </div>
+
       </div>
     </section>
   );
